@@ -1,0 +1,28 @@
+{
+  "name": "ssh-tetris",
+  "version": "1.0.0",
+  "description": "SSH-based Tetris game with authentication and leaderboards",
+  "main": "tetris-server.js",
+  "scripts": {
+    "start": "node tetris-server.js",
+    "dev": "nodemon tetris-server.js"
+  },
+  "keywords": [
+    "ssh",
+    "tetris",
+    "game",
+    "terminal",
+    "multiplayer"
+  ],
+  "author": "Supernova3339",
+  "license": "MIT",
+  "dependencies": {
+    "ssh2": "^1.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
