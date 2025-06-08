@@ -5,3 +5,4 @@ authorized_pgp_keys.json
 package-lock.json
 tetris_players.json
 tetris_highscores.json
+.idea

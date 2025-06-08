@@ -11,11 +11,11 @@ RUN apk add --no-cache openssh-keygen
 RUN addgroup -g 1001 -S tetris && \
     adduser -S tetris -u 1001 -G tetris
 
-# Copy package files first (for better Docker layer caching)
-COPY package*.json ./
+# Copy package.json
+COPY package.json ./
 
-# Install dependencies
-RUN npm ci --only=production && npm cache clean --force
+# Install dependencies (will generate package-lock.json)
+RUN npm install --only=production && npm cache clean --force
 
 # Copy application code
 COPY tetris-server.js ./
